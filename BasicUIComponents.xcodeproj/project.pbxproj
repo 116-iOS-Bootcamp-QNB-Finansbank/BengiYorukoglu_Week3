@@ -29,6 +29,7 @@
 		23E5078E26ECC2B500596FFF /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5078D26ECC2B500596FFF /* ScrollViewController.swift */; };
 		23E507A626EDE65900596FFF /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E507A526EDE65900596FFF /* HomeTableViewController.swift */; };
 		23E507A826EDE7AB00596FFF /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E507A726EDE7AB00596FFF /* DetailTableViewController.swift */; };
+		D9DA88BD26F3CD49000965FD /* CalculatorOperationLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DA88BC26F3CD49000965FD /* CalculatorOperationLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		23E5078D26ECC2B500596FFF /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		23E507A526EDE65900596FFF /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		23E507A726EDE7AB00596FFF /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		D9DA88BC26F3CD49000965FD /* CalculatorOperationLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorOperationLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		23A2AA6C26E4D504009310F0 = {
 			isa = PBXGroup;
 			children = (
+				D9DA88BA26F3CD0A000965FD /* Logic */,
 				23A2AA7726E4D504009310F0 /* BasicUIComponents */,
 				23A2AA8E26E4D507009310F0 /* BasicUIComponentsTests */,
 				23A2AA9926E4D507009310F0 /* BasicUIComponentsUITests */,
@@ -208,6 +211,22 @@
 				23E5077F26EC95C900596FFF /* MyLabel.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		D9DA88BA26F3CD0A000965FD /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				D9DA88BB26F3CD29000965FD /* Calculator */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		D9DA88BB26F3CD29000965FD /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				D9DA88BC26F3CD49000965FD /* CalculatorOperationLogic.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +362,7 @@
 			files = (
 				2319175726EE234C00617A9E /* MyNavigationViewController.swift in Sources */,
 				235C707D26EC900400D7B5BB /* ButtonViewController.swift in Sources */,
+				D9DA88BD26F3CD49000965FD /* CalculatorOperationLogic.swift in Sources */,
 				2319175326EE146000617A9E /* CustomCollectionViewCell.swift in Sources */,
 				2319175526EE1FCB00617A9E /* NavigationExampleViewController.swift in Sources */,
 				23A2AA7D26E4D504009310F0 /* LabelAndTextFieldViewController.swift in Sources */,
@@ -535,6 +555,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UAK289TV9;
 				INFOPLIST_FILE = BasicUIComponents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,6 +575,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UAK289TV9;
 				INFOPLIST_FILE = BasicUIComponents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -573,7 +595,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UAK289TV9;
 				INFOPLIST_FILE = BasicUIComponentsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,7 +617,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UAK289TV9;
 				INFOPLIST_FILE = BasicUIComponentsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -616,6 +638,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UAK289TV9;
 				INFOPLIST_FILE = BasicUIComponentsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,6 +659,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UAK289TV9;
 				INFOPLIST_FILE = BasicUIComponentsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -16,21 +16,30 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.calculatorLogic = CalculatorOperationLogic()
     }
     
+    private var calculatorLogic:CalculatorOperationLogic?
     private var isTyping: Bool = false
+    private var lastValue:Double = 0;
+    private var lastOperation:Int32 = -1;
     
     @IBAction func digitButtonTapped(_ sender: UIButton) {
         let digit = String(sender.tag)
+        let digVal = NSString(string: digit).intValue
         let displayText = resultLabel.text ?? ""
-
-        
-        if isTyping {
-            resultLabel.text = displayText + digit
-        } else {
-            resultLabel.text = digit
-            isTyping.toggle()
+        if digVal < 10 {
+            
+            if isTyping {
+                resultLabel.text = displayText + digit
+            } else {
+                resultLabel.text = digit
+                isTyping.toggle()
+            }
+        }
+        else{
+         
+            doOperation(operation:digVal);
         }
     }
     
@@ -40,7 +49,22 @@ class CalculatorViewController: UIViewController {
         resultLabel.text = String(sqrt(value))
     }
     
+    func doOperation( operation: Int32){
+       
+        let currentValue = NSString(string: resultLabel.text ?? "0").doubleValue
+        let result: Double? = calculatorLogic?.doOperation(opVal: currentValue, operation: operation)
+        if result == nil{
+            resultLabel.text = "";
+        }
+        else{
+            resultLabel.text = String(result!)
+        }
     
+        isTyping.toggle();
+        return;
+ 
+        
+    }
     
     
     /*
